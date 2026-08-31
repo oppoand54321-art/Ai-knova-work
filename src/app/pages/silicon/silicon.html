@@ -41,6 +41,89 @@
   </section>
 
 
+  <!-- Live Hardware Metrics & Telemetry Stream -->
+  <section class="border-t border-slate-800 px-6 py-16 bg-slate-900/40">
+    <div class="mx-auto max-w-6xl">
+      
+      <div class="text-center mb-10">
+        <p class="text-sm font-semibold uppercase tracking-[0.3em] text-cyan-400">
+          Live Telemetry
+        </p>
+        <h2 class="mt-2 text-3xl font-bold">
+          Hardware Bridge & Metrics
+        </h2>
+      </div>
+
+      <!-- Real-Time Hardware Metrics Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-8">
+        
+        <!-- Chip Load Card -->
+        <div class="bg-slate-900/90 border border-slate-800 rounded-2xl p-5 shadow-xl">
+          <p class="text-xs text-slate-400 uppercase tracking-widest mb-1">Chip Load</p>
+          <div class="flex items-baseline justify-between">
+            <span class="text-3xl font-black text-sky-400">73%</span>
+            <span class="text-xs text-emerald-400 font-semibold">Stable</span>
+          </div>
+          <div class="w-full bg-slate-800 h-2 rounded-full mt-4 overflow-hidden">
+            <div class="bg-gradient-to-r from-cyan-500 to-blue-600 h-full rounded-full" style="width: 73%"></div>
+          </div>
+        </div>
+
+        <!-- VRAM Allocation Card -->
+        <div class="bg-slate-900/90 border border-slate-800 rounded-2xl p-5 shadow-xl">
+          <p class="text-xs text-slate-400 uppercase tracking-widest mb-1">VRAM Allocation</p>
+          <div class="flex items-baseline justify-between">
+            <span class="text-2xl font-black text-rose-400">22.6 / 32.0</span>
+            <span class="text-xs text-rose-400 font-semibold">GB</span>
+          </div>
+          <div class="w-full bg-slate-800 h-2 rounded-full mt-4 overflow-hidden">
+            <div class="bg-gradient-to-r from-rose-500 to-orange-500 h-full rounded-full" style="width: 70.6%"></div>
+          </div>
+        </div>
+
+        <!-- Thermal Status Card -->
+        <div class="bg-slate-900/90 border border-slate-800 rounded-2xl p-5 shadow-xl">
+          <p class="text-xs text-slate-400 uppercase tracking-widest mb-1">Thermal Status</p>
+          <div class="flex items-baseline justify-between">
+            <span class="text-3xl font-black text-amber-400">58.3°C</span>
+            <span class="text-xs text-emerald-400 font-semibold">Normal</span>
+          </div>
+          <div class="w-full bg-slate-800 h-2 rounded-full mt-4 overflow-hidden">
+            <div class="bg-gradient-to-r from-amber-500 to-yellow-400 h-full rounded-full" style="width: 58.3%"></div>
+          </div>
+        </div>
+
+        <!-- Inference Latency Card -->
+        <div class="bg-slate-900/90 border border-slate-800 rounded-2xl p-5 shadow-xl">
+          <p class="text-xs text-slate-400 uppercase tracking-widest mb-1">Inference Latency</p>
+          <div class="flex items-baseline justify-between">
+            <span class="text-3xl font-black text-emerald-400">0.0369s</span>
+            <span class="text-xs text-cyan-400 font-semibold">Ultra-Low</span>
+          </div>
+          <div class="w-full bg-slate-800 h-2 rounded-full mt-4 overflow-hidden">
+            <div class="bg-gradient-to-r from-emerald-500 to-teal-400 h-full rounded-full" style="width: 90%"></div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Real-Time Execution Stream Box -->
+      <div class="bg-slate-900/90 border border-slate-800 rounded-2xl p-6 shadow-xl font-mono">
+        <h3 class="text-sm font-bold text-slate-300 uppercase tracking-wider mb-3 flex items-center">
+          <span class="text-emerald-400 mr-2">💻</span> Integrated AI Core & Debugging Stream
+        </h3>
+        <div class="bg-slate-950 rounded-xl p-4 border border-slate-800 text-xs text-slate-300 space-y-2 h-32 overflow-y-auto">
+          <p class="text-cyan-400">[01:35:50] [LPU Bridge] Synced local silicon node at 127.0.0.1:9000.</p>
+          <p class="text-emerald-400">[01:35:52] [Embedded AI Core] Inference performance analysis: Optimal.</p>
+          <p class="text-amber-400">[01:35:54] [Debug Agent] Automated code breakdown scan completed. Zero anomalies detected.</p>
+          <p class="text-slate-500">root@knova-silicon:~# Awaiting next inference instruction batch...</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
   <!-- AI Core Foundation -->
   <section class="border-t border-slate-800 px-6 py-24">
     <div class="mx-auto max-w-5xl text-center">
@@ -451,6 +534,7 @@
       <div class="mt-10 overflow-hidden rounded-2xl border border-slate-800 bg-black shadow-2xl">
 
         <video
+          id="demo-video"
           class="h-auto w-full"
           controls
           preload="metadata"
@@ -467,12 +551,13 @@
       </div>
 
       <div class="mt-6 flex justify-center">
-        <a
-          href="#silicon-demo"
-          class="rounded-xl bg-cyan-400 px-7 py-3.5 font-semibold text-slate-950 transition hover:bg-cyan-300"
+        <button
+          type="button"
+          onclick="const vid = document.getElementById('demo-video'); vid.scrollIntoView({ behavior: 'smooth' }); vid.play();"
+          class="rounded-xl bg-cyan-400 px-7 py-3.5 font-semibold text-slate-950 transition hover:bg-cyan-300 cursor-pointer"
         >
           ▶ Play Silicon Demo
-        </a>
+        </button>
       </div>
 
       <p class="mt-4 text-center text-sm text-slate-500">
