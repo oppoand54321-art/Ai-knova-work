@@ -1,0 +1,150 @@
+<div class="min-h-screen bg-slate-950 text-white">
+
+  <section class="flex min-h-screen items-center justify-center px-6 py-20">
+    <div class="mx-auto max-w-5xl text-center">
+
+      <p class="text-sm font-semibold uppercase tracking-[0.35em] text-cyan-400">
+        AI.KNova.work
+      </p>
+
+      <h1 class="mt-5 text-6xl font-bold tracking-tight sm:text-7xl">
+        KNova Quant Studio
+      </h1>
+
+      <p class="mx-auto mt-7 max-w-3xl text-xl leading-8 text-slate-300">
+        An advanced PyTorch and Hugging Face powered core architecture featuring
+        a high-performance web dashboard for dynamic model quantization and local optimization.
+      </p>
+
+      <p class="mx-auto mt-5 max-w-2xl text-base leading-7 text-slate-500">
+        Streamline weight ingestion, real-time bit-precision conversion, and fine-tuning
+        without cloud dependency.
+      </p>
+
+      <div class="mt-9 flex justify-center">
+        <button
+          type="button"
+          onclick="document.getElementById('quant-demo').scrollIntoView({behavior: 'smooth'}); document.getElementById('quant-video').play();"
+          class="cursor-pointer rounded-xl bg-cyan-400 px-7 py-3.5 font-semibold text-slate-950 transition hover:bg-cyan-300"
+        >
+          Watch Quant Studio Demo
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+
+  <section class="border-t border-slate-800 px-6 py-20">
+    <div class="mx-auto max-w-6xl">
+
+      <div class="text-center">
+        <p class="text-sm font-semibold uppercase tracking-[0.3em] text-cyan-400">
+          Core Architecture
+        </p>
+
+        <h2 class="mt-4 text-4xl font-bold">
+          High-Performance Optimization Modules
+        </h2>
+
+        <p class="mx-auto mt-6 max-w-3xl text-lg leading-8 text-slate-400">
+          Quant Studio integrates heavy-duty AI pipelines with an intuitive
+          web interface for seamless local hardware engineering.
+        </p>
+      </div>
+
+
+      <div class="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+
+        <div class="rounded-2xl border border-slate-800 bg-slate-900/60 p-6">
+          <p class="text-sm font-semibold text-cyan-400">PIPELINE 01</p>
+          <h3 class="mt-3 text-xl font-bold">Model Ingestion</h3>
+          <p class="mt-3 leading-7 text-slate-400">
+            Supports direct local weight loading for open-source architectures including Llama, Mistral, and Gemma.
+          </p>
+        </div>
+
+        <div class="rounded-2xl border border-slate-800 bg-slate-900/60 p-6">
+          <p class="text-sm font-semibold text-cyan-400">ENGINE 02</p>
+          <h3 class="mt-3 text-xl font-bold">Dynamic Quantization</h3>
+          <p class="mt-3 leading-7 text-slate-400">
+            Real-time bit-precision conversion from FP16 down to INT4 based on live hardware thermal and load metrics.
+          </p>
+        </div>
+
+        <div class="rounded-2xl border border-slate-800 bg-slate-900/60 p-6">
+          <p class="text-sm font-semibold text-cyan-400">SANDBOX 03</p>
+          <h3 class="mt-3 text-xl font-bold">Fine-Tuning Sandbox</h3>
+          <p class="mt-3 leading-7 text-slate-400">
+            Low-rank adaptation (LoRA) configuration module optimized for local hardware execution without cloud dependency.
+          </p>
+        </div>
+
+        <div class="rounded-2xl border border-slate-800 bg-slate-900/60 p-6">
+          <p class="text-sm font-semibold text-cyan-400">DEPLOY 04</p>
+          <h3 class="mt-3 text-xl font-bold">Export & Deployment</h3>
+          <p class="mt-3 leading-7 text-slate-400">
+            One-click packaging of optimized model weights into ultra-low latency inference endpoints.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <section id="quant-demo" class="border-t border-slate-800 px-6 py-20">
+    <div class="mx-auto max-w-5xl text-center">
+
+      <p class="text-sm font-semibold uppercase tracking-[0.3em] text-cyan-400">
+        Live Studio Demo
+      </p>
+
+      <h2 class="mt-4 text-4xl font-bold">
+        KNova Quant Studio in Action
+      </h2>
+
+      <p class="mx-auto mt-6 max-w-3xl text-lg leading-8 text-slate-400">
+        Watch how Quant Studio handles weight ingestion, bit-precision quantization,
+        and local fine-tuning workflows in real time.
+      </p>
+
+      <div class="mt-10 overflow-hidden rounded-2xl border border-slate-800 bg-slate-900 shadow-2xl">
+
+        <video
+          id="quant-video"
+          class="aspect-video w-full object-cover"
+          controls
+          preload="metadata"
+          playsinline
+        >
+          <source src="/videos/quant.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+
+      </div>
+
+      <div class="mt-6 flex justify-center">
+        <button
+          type="button"
+          onclick="document.getElementById('quant-video').play()"
+          class="cursor-pointer rounded-xl bg-cyan-400 px-7 py-3.5 font-semibold text-slate-950 transition hover:bg-cyan-300"
+        >
+          ▶ Play Quant Demo
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+
+  <footer class="border-t border-slate-800 px-6 py-8">
+    <div class="mx-auto max-w-6xl text-center text-sm text-slate-500">
+      <p class="text-sm text-slate-600">
+        Built by KNova in Karachi, Pakistan. © 2026 AI.KNova.work
+      </p>
+    </div>
+  </footer>
+
+</div>

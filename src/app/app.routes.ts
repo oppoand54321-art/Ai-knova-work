@@ -17,6 +17,11 @@ export const routes: Routes = [
       import('./pages/silicon/silicon').then(m => m.Silicon)
   },
   {
+    path: 'quant-studio',
+    loadComponent: () =>
+      import('./pages/quant_studio/quant-studio').then(m => m.QuantStudio)
+  },
+  {
     path: 'forge',
     loadComponent: () =>
       import('./pages/forge/forge').then(m => m.Forge)
