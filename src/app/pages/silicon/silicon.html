@@ -1,18 +1,21 @@
-<div class="min-h-screen bg-slate-950 text-white">
+<section class="min-h-screen bg-slate-950 text-slate-100">
 
-  <!-- Hero -->
-  <section class="flex min-h-screen items-center justify-center px-6 py-20">
-    <div class="mx-auto max-w-5xl text-center">
+  <!-- HERO -->
+  <section class="relative min-h-screen flex items-center justify-center overflow-hidden px-6 py-24">
 
-      <p class="text-sm font-semibold uppercase tracking-[0.35em] text-cyan-400">
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(6,182,212,0.12),transparent_45%)]"></div>
+
+    <div class="relative z-10 max-w-5xl text-center">
+
+      <p class="mb-5 text-sm font-semibold uppercase tracking-[0.35em] text-cyan-400">
         AI.KNova.work
       </p>
 
-      <div class="mt-7 inline-flex items-center rounded-full border border-cyan-400/30 bg-cyan-400/10 px-5 py-2 text-sm font-semibold text-cyan-400">
+      <div class="mb-6 inline-flex items-center rounded-full border border-cyan-400/30 bg-cyan-400/10 px-5 py-2 text-sm font-semibold text-cyan-400">
         Silicon Engineering
       </div>
 
-      <h1 class="mt-6 text-5xl font-bold tracking-tight sm:text-7xl">
+      <h1 class="text-5xl font-bold tracking-tight text-white sm:text-7xl">
         KNOVA Silicon Engine
       </h1>
 
@@ -29,12 +32,14 @@
       </p>
 
       <div class="mt-9 flex justify-center">
-        <a
-          href="#silicon-demo"
-          class="rounded-xl bg-cyan-400 px-7 py-3.5 font-semibold text-slate-950 transition hover:bg-cyan-300"
+        <!-- اوپر والا بٹن اب اسکرول بھی کرے گا اور ویڈیو بھی پلے کرے گا -->
+        <button
+          type="button"
+          onclick="document.getElementById('silicon-demo').scrollIntoView({behavior: 'smooth'}); document.getElementById('demo-video').play();"
+          class="cursor-pointer rounded-xl bg-cyan-400 px-7 py-3.5 font-semibold text-slate-950 transition hover:bg-cyan-300"
         >
           Watch Silicon Demo
-        </a>
+        </button>
       </div>
 
     </div>
@@ -42,77 +47,77 @@
 
 
   <!-- Live Hardware Metrics & Telemetry Stream -->
-  <section class="border-t border-slate-800 px-6 py-16 bg-slate-900/40">
+  <section class="border-t border-slate-800 bg-slate-900/40 px-6 py-16">
     <div class="mx-auto max-w-6xl">
       
-      <div class="text-center mb-10">
+      <div class="mb-10 text-center">
         <p class="text-sm font-semibold uppercase tracking-[0.3em] text-cyan-400">
           Live Telemetry
         </p>
-        <h2 class="mt-2 text-3xl font-bold">
+        <h2 class="mt-2 text-3xl font-bold text-white">
           Hardware Bridge & Metrics
         </h2>
       </div>
 
       <!-- Real-Time Hardware Metrics Grid -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-8">
+      <div class="mb-8 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
         
         <!-- Chip Load Card -->
-        <div class="bg-slate-900/90 border border-slate-800 rounded-2xl p-5 shadow-xl">
-          <p class="text-xs text-slate-400 uppercase tracking-widest mb-1">Chip Load</p>
+        <div class="rounded-2xl border border-slate-800 bg-slate-900/90 p-5 shadow-xl">
+          <p class="mb-1 text-xs uppercase tracking-widest text-slate-400">Chip Load</p>
           <div class="flex items-baseline justify-between">
             <span class="text-3xl font-black text-sky-400">73%</span>
-            <span class="text-xs text-emerald-400 font-semibold">Stable</span>
+            <span class="text-xs font-semibold text-emerald-400">Stable</span>
           </div>
-          <div class="w-full bg-slate-800 h-2 rounded-full mt-4 overflow-hidden">
-            <div class="bg-gradient-to-r from-cyan-500 to-blue-600 h-full rounded-full" style="width: 73%"></div>
+          <div class="mt-4 h-2 w-full overflow-hidden rounded-full bg-slate-800">
+            <div class="h-full rounded-full bg-gradient-to-r from-cyan-500 to-blue-600" style="width: 73%"></div>
           </div>
         </div>
 
         <!-- VRAM Allocation Card -->
-        <div class="bg-slate-900/90 border border-slate-800 rounded-2xl p-5 shadow-xl">
-          <p class="text-xs text-slate-400 uppercase tracking-widest mb-1">VRAM Allocation</p>
+        <div class="rounded-2xl border border-slate-800 bg-slate-900/90 p-5 shadow-xl">
+          <p class="mb-1 text-xs uppercase tracking-widest text-slate-400">VRAM Allocation</p>
           <div class="flex items-baseline justify-between">
             <span class="text-2xl font-black text-rose-400">22.6 / 32.0</span>
-            <span class="text-xs text-rose-400 font-semibold">GB</span>
+            <span class="text-xs font-semibold text-rose-400">GB</span>
           </div>
-          <div class="w-full bg-slate-800 h-2 rounded-full mt-4 overflow-hidden">
-            <div class="bg-gradient-to-r from-rose-500 to-orange-500 h-full rounded-full" style="width: 70.6%"></div>
+          <div class="mt-4 h-2 w-full overflow-hidden rounded-full bg-slate-800">
+            <div class="h-full rounded-full bg-gradient-to-r from-rose-500 to-orange-500" style="width: 70.6%"></div>
           </div>
         </div>
 
         <!-- Thermal Status Card -->
-        <div class="bg-slate-900/90 border border-slate-800 rounded-2xl p-5 shadow-xl">
-          <p class="text-xs text-slate-400 uppercase tracking-widest mb-1">Thermal Status</p>
+        <div class="rounded-2xl border border-slate-800 bg-slate-900/90 p-5 shadow-xl">
+          <p class="mb-1 text-xs uppercase tracking-widest text-slate-400">Thermal Status</p>
           <div class="flex items-baseline justify-between">
             <span class="text-3xl font-black text-amber-400">58.3°C</span>
-            <span class="text-xs text-emerald-400 font-semibold">Normal</span>
+            <span class="text-xs font-semibold text-emerald-400">Normal</span>
           </div>
-          <div class="w-full bg-slate-800 h-2 rounded-full mt-4 overflow-hidden">
-            <div class="bg-gradient-to-r from-amber-500 to-yellow-400 h-full rounded-full" style="width: 58.3%"></div>
+          <div class="mt-4 h-2 w-full overflow-hidden rounded-full bg-slate-800">
+            <div class="h-full rounded-full bg-gradient-to-r from-amber-500 to-yellow-400" style="width: 58.3%"></div>
           </div>
         </div>
 
         <!-- Inference Latency Card -->
-        <div class="bg-slate-900/90 border border-slate-800 rounded-2xl p-5 shadow-xl">
-          <p class="text-xs text-slate-400 uppercase tracking-widest mb-1">Inference Latency</p>
+        <div class="rounded-2xl border border-slate-800 bg-slate-900/90 p-5 shadow-xl">
+          <p class="mb-1 text-xs uppercase tracking-widest text-slate-400">Inference Latency</p>
           <div class="flex items-baseline justify-between">
             <span class="text-3xl font-black text-emerald-400">0.0369s</span>
-            <span class="text-xs text-cyan-400 font-semibold">Ultra-Low</span>
+            <span class="text-xs font-semibold text-cyan-400">Ultra-Low</span>
           </div>
-          <div class="w-full bg-slate-800 h-2 rounded-full mt-4 overflow-hidden">
-            <div class="bg-gradient-to-r from-emerald-500 to-teal-400 h-full rounded-full" style="width: 90%"></div>
+          <div class="mt-4 h-2 w-full overflow-hidden rounded-full bg-slate-800">
+            <div class="h-full rounded-full bg-gradient-to-r from-emerald-500 to-teal-400" style="width: 90%"></div>
           </div>
         </div>
 
       </div>
 
       <!-- Real-Time Execution Stream Box -->
-      <div class="bg-slate-900/90 border border-slate-800 rounded-2xl p-6 shadow-xl font-mono">
-        <h3 class="text-sm font-bold text-slate-300 uppercase tracking-wider mb-3 flex items-center">
-          <span class="text-emerald-400 mr-2">💻</span> Integrated AI Core & Debugging Stream
+      <div class="rounded-2xl border border-slate-800 bg-slate-900/90 p-6 font-mono shadow-xl">
+        <h3 class="mb-3 flex items-center text-sm font-bold uppercase tracking-wider text-slate-300">
+          <span class="mr-2 text-emerald-400">💻</span> Integrated AI Core & Debugging Stream
         </h3>
-        <div class="bg-slate-950 rounded-xl p-4 border border-slate-800 text-xs text-slate-300 space-y-2 h-32 overflow-y-auto">
+        <div class="h-32 space-y-2 overflow-y-auto rounded-xl border border-slate-800 bg-slate-950 p-4 text-xs text-slate-300">
           <p class="text-cyan-400">[01:35:50] [LPU Bridge] Synced local silicon node at 127.0.0.1:9000.</p>
           <p class="text-emerald-400">[01:35:52] [Embedded AI Core] Inference performance analysis: Optimal.</p>
           <p class="text-amber-400">[01:35:54] [Debug Agent] Automated code breakdown scan completed. Zero anomalies detected.</p>
@@ -132,7 +137,7 @@
         AI Foundation
       </p>
 
-      <h2 class="mt-4 text-4xl font-bold sm:text-5xl">
+      <h2 class="mt-4 text-4xl font-bold text-white sm:text-5xl">
         Powered by the KNOVA AI Core
       </h2>
 
@@ -156,7 +161,7 @@
             AI CORE
           </p>
 
-          <h3 class="mt-3 text-xl font-bold">
+          <h3 class="mt-3 text-xl font-bold text-white">
             Intelligent Foundation
           </h3>
 
@@ -172,7 +177,7 @@
             AI AGENT
           </p>
 
-          <h3 class="mt-3 text-xl font-bold">
+          <h3 class="mt-3 text-xl font-bold text-white">
             Engineering Intelligence
           </h3>
 
@@ -188,7 +193,7 @@
             SILICON LAYER
           </p>
 
-          <h3 class="mt-3 text-xl font-bold">
+          <h3 class="mt-3 text-xl font-bold text-white">
             Hardware Intelligence
           </h3>
 
@@ -230,7 +235,7 @@
           Current Status
         </p>
 
-        <h2 class="mt-4 text-4xl font-bold sm:text-5xl">
+        <h2 class="mt-4 text-4xl font-bold text-white sm:text-5xl">
           Working Engineering Platform
         </h2>
 
@@ -249,7 +254,7 @@
         <div class="rounded-2xl border border-slate-800 bg-slate-900/60 p-6">
           <p class="text-sm text-cyan-400">01</p>
 
-          <h3 class="mt-3 text-xl font-bold">
+          <h3 class="mt-3 text-xl font-bold text-white">
             Angular Frontend
           </h3>
 
@@ -263,7 +268,7 @@
         <div class="rounded-2xl border border-slate-800 bg-slate-900/60 p-6">
           <p class="text-sm text-cyan-400">02</p>
 
-          <h3 class="mt-3 text-xl font-bold">
+          <h3 class="mt-3 text-xl font-bold text-white">
             Inference UI
           </h3>
 
@@ -277,7 +282,7 @@
         <div class="rounded-2xl border border-slate-800 bg-slate-900/60 p-6">
           <p class="text-sm text-cyan-400">03</p>
 
-          <h3 class="mt-3 text-xl font-bold">
+          <h3 class="mt-3 text-xl font-bold text-white">
             Hardware Bridge
           </h3>
 
@@ -291,7 +296,7 @@
         <div class="rounded-2xl border border-slate-800 bg-slate-900/60 p-6">
           <p class="text-sm text-cyan-400">04</p>
 
-          <h3 class="mt-3 text-xl font-bold">
+          <h3 class="mt-3 text-xl font-bold text-white">
             Chip Profiler
           </h3>
 
@@ -305,7 +310,7 @@
         <div class="rounded-2xl border border-slate-800 bg-slate-900/60 p-6">
           <p class="text-sm text-cyan-400">05</p>
 
-          <h3 class="mt-3 text-xl font-bold">
+          <h3 class="mt-3 text-xl font-bold text-white">
             Register Operations
           </h3>
 
@@ -319,7 +324,7 @@
         <div class="rounded-2xl border border-slate-800 bg-slate-900/60 p-6">
           <p class="text-sm text-cyan-400">06</p>
 
-          <h3 class="mt-3 text-xl font-bold">
+          <h3 class="mt-3 text-xl font-bold text-white">
             Metrics & Profiles
           </h3>
 
@@ -343,7 +348,7 @@
         Engineering Architecture
       </p>
 
-      <h2 class="mt-4 text-4xl font-bold sm:text-5xl">
+      <h2 class="mt-4 text-4xl font-bold text-white sm:text-5xl">
         From AI Core to Silicon
       </h2>
 
@@ -363,7 +368,7 @@
           ↓
         </div>
 
-        <div class="rounded-2xl border border-slate-800 bg-slate-900 p-5 font-semibold">
+        <div class="rounded-2xl border border-slate-800 bg-slate-900 p-5 font-semibold text-white">
           AI Engineering Layer
         </div>
 
@@ -371,7 +376,7 @@
           ↓
         </div>
 
-        <div class="rounded-2xl border border-slate-800 bg-slate-900 p-5 font-semibold">
+        <div class="rounded-2xl border border-slate-800 bg-slate-900 p-5 font-semibold text-white">
           Silicon Engineering Engine
         </div>
 
@@ -379,7 +384,7 @@
           ↓
         </div>
 
-        <div class="rounded-2xl border border-slate-800 bg-slate-900 p-5 font-semibold">
+        <div class="rounded-2xl border border-slate-800 bg-slate-900 p-5 font-semibold text-white">
           Hardware Bridge / Driver Layer
         </div>
 
@@ -407,7 +412,7 @@
           Development Roadmap
         </p>
 
-        <h2 class="mt-4 text-4xl font-bold sm:text-5xl">
+        <h2 class="mt-4 text-4xl font-bold text-white sm:text-5xl">
           Next Generation Silicon Engineering
         </h2>
 
@@ -419,7 +424,7 @@
         <div class="rounded-2xl border border-slate-800 bg-slate-900/60 p-6">
           <p class="text-sm font-semibold text-cyan-400">PHASE 1</p>
 
-          <h3 class="mt-3 text-xl font-bold">
+          <h3 class="mt-3 text-xl font-bold text-white">
             Hardware Bridge Hardening
           </h3>
 
@@ -433,7 +438,7 @@
         <div class="rounded-2xl border border-slate-800 bg-slate-900/60 p-6">
           <p class="text-sm font-semibold text-cyan-400">PHASE 2</p>
 
-          <h3 class="mt-3 text-xl font-bold">
+          <h3 class="mt-3 text-xl font-bold text-white">
             Real Driver Interface
           </h3>
 
@@ -447,7 +452,7 @@
         <div class="rounded-2xl border border-slate-800 bg-slate-900/60 p-6">
           <p class="text-sm font-semibold text-cyan-400">PHASE 3</p>
 
-          <h3 class="mt-3 text-xl font-bold">
+          <h3 class="mt-3 text-xl font-bold text-white">
             Chip Programming
           </h3>
 
@@ -461,7 +466,7 @@
         <div class="rounded-2xl border border-slate-800 bg-slate-900/60 p-6">
           <p class="text-sm font-semibold text-cyan-400">PHASE 4</p>
 
-          <h3 class="mt-3 text-xl font-bold">
+          <h3 class="mt-3 text-xl font-bold text-white">
             Real-Time Metrics
           </h3>
 
@@ -475,7 +480,7 @@
         <div class="rounded-2xl border border-slate-800 bg-slate-900/60 p-6">
           <p class="text-sm font-semibold text-cyan-400">PHASE 5</p>
 
-          <h3 class="mt-3 text-xl font-bold">
+          <h3 class="mt-3 text-xl font-bold text-white">
             LLM Runtime on Silicon
           </h3>
 
@@ -489,7 +494,7 @@
         <div class="rounded-2xl border border-slate-800 bg-slate-900/60 p-6">
           <p class="text-sm font-semibold text-cyan-400">PHASE 6</p>
 
-          <h3 class="mt-3 text-xl font-bold">
+          <h3 class="mt-3 text-xl font-bold text-white">
             Production Hardening
           </h3>
 
@@ -518,7 +523,7 @@
           Live Engineering Demo
         </p>
 
-        <h2 class="mt-4 text-4xl font-bold sm:text-5xl">
+        <h2 class="mt-4 text-4xl font-bold text-white sm:text-5xl">
           KNOVA Silicon Engine Demo
         </h2>
 
@@ -551,10 +556,11 @@
       </div>
 
       <div class="mt-6 flex justify-center">
+        <!-- نیچے والا بٹن بالکل ویسا ہی ہے جیسا پہلے تھا -->
         <button
           type="button"
-          onclick="const vid = document.getElementById('demo-video'); vid.scrollIntoView({ behavior: 'smooth' }); vid.play();"
-          class="rounded-xl bg-cyan-400 px-7 py-3.5 font-semibold text-slate-950 transition hover:bg-cyan-300 cursor-pointer"
+          onclick="document.getElementById('demo-video').play()"
+          class="cursor-pointer rounded-xl bg-cyan-400 px-7 py-3.5 font-semibold text-slate-950 transition hover:bg-cyan-300"
         >
           ▶ Play Silicon Demo
         </button>
@@ -576,7 +582,7 @@
         ⚡
       </div>
 
-      <h2 class="mt-7 text-4xl font-bold">
+      <h2 class="mt-7 text-4xl font-bold text-white">
         KNOVA Silicon Engine
       </h2>
 
@@ -601,8 +607,10 @@
   <!-- Footer -->
   <footer class="border-t border-slate-800 px-6 py-8">
     <div class="mx-auto max-w-6xl text-center text-sm text-slate-500">
-      © 2026 AI.KNova.work
+      <p class="text-sm text-slate-600">
+        AI.KNova.work
+      </p>
     </div>
   </footer>
 
-</div>
+</section>

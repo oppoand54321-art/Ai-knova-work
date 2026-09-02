@@ -1,0 +1,769 @@
+<style>
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 20px;
+  }
+</style>
+
+
+<div class="min-h-screen bg-slate-950 text-white">  <!-- Hero -->  <section class="flex min-h-screen items-center justify-center px-6 py-20">
+    <div class="mx-auto max-w-5xl text-center">  <p class="text-sm font-semibold uppercase tracking-[0.35em] text-cyan-400">
+    AI.KNova.work
+  </p>
+
+  <div class="mt-7 inline-flex items-center rounded-full border border-cyan-400/30 bg-cyan-400/10 px-5 py-2 text-sm font-semibold text-cyan-400">
+    Multi-Agent AI Orchestration
+  </div>
+
+  <h1 class="mt-6 text-5xl font-bold tracking-tight sm:text-7xl">
+    KNOVA SWARM
+  </h1>
+
+  <p class="mx-auto mt-7 max-w-3xl text-xl leading-8 text-slate-300">
+    An enterprise-grade multi-agent AI orchestration layer
+    built on top of the existing KNOVA AI Core.
+  </p>
+
+  <p class="mx-auto mt-5 max-w-2xl text-base leading-7 text-slate-500">
+    SWARM coordinates specialized AI agents, executes their
+    workloads in parallel and aggregates their intelligence
+    into a unified engineering result.
+  </p>
+
+  <div class="mt-9 flex justify-center">
+    <button
+      type="button"
+      onclick="const vid = document.getElementById('swarm-demo-video'); vid.scrollIntoView({ behavior: 'smooth' }); vid.play();"
+      class="cursor-pointer rounded-xl bg-cyan-400 px-7 py-3.5 font-semibold text-slate-950 transition hover:bg-cyan-300"
+    >
+      Watch SWARM Demo
+    </button>
+  </div>
+
+</div>
+
+  </section>  <!-- Live Orchestration -->  <section class="border-t border-slate-800 bg-slate-900/40 px-6 py-16">
+    <div class="mx-auto max-w-6xl">  <div class="mb-10 text-center">
+    <p class="text-sm font-semibold uppercase tracking-[0.3em] text-cyan-400">
+      Orchestration Status
+    </p>
+
+    <h2 class="mt-2 text-3xl font-bold">
+      Multi-Agent Execution Engine
+    </h2>
+
+    <p class="mx-auto mt-5 max-w-3xl leading-7 text-slate-400">
+      A coordinated execution environment where specialized
+      agents work in parallel through the KNOVA AI Core.
+    </p>
+  </div>
+
+
+  <!-- Metrics -->
+  <div class="mb-8 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
+
+    <div class="rounded-2xl border border-slate-800 bg-slate-900/90 p-5 shadow-xl">
+      <p class="mb-1 text-xs uppercase tracking-widest text-slate-400">
+        Active Agents
+      </p>
+
+      <div class="flex items-baseline justify-between">
+        <span class="text-3xl font-black text-cyan-400">03</span>
+        <span class="text-xs font-semibold text-emerald-400">
+          Parallel
+        </span>
+      </div>
+
+      <div class="mt-4 h-2 w-full overflow-hidden rounded-full bg-slate-800">
+        <div
+          class="h-full w-full rounded-full bg-gradient-to-r from-cyan-500 to-blue-600"
+        ></div>
+      </div>
+    </div>
+
+
+    <div class="rounded-2xl border border-slate-800 bg-slate-900/90 p-5 shadow-xl">
+      <p class="mb-1 text-xs uppercase tracking-widest text-slate-400">
+        Execution Mode
+      </p>
+
+      <div class="flex items-baseline justify-between">
+        <span class="text-2xl font-black text-sky-400">
+          ASYNC
+        </span>
+
+        <span class="text-xs font-semibold text-cyan-400">
+          asyncio
+        </span>
+      </div>
+
+      <div class="mt-4 h-2 w-full overflow-hidden rounded-full bg-slate-800">
+        <div
+          class="h-full w-[90%] rounded-full bg-gradient-to-r from-cyan-500 to-blue-600"
+        ></div>
+      </div>
+    </div>
+
+
+    <div class="rounded-2xl border border-slate-800 bg-slate-900/90 p-5 shadow-xl">
+      <p class="mb-1 text-xs uppercase tracking-widest text-slate-400">
+        AI Provider
+      </p>
+
+      <div class="flex items-baseline justify-between">
+        <span class="text-2xl font-black text-amber-400">
+          Gemini
+        </span>
+
+        <span class="text-xs font-semibold text-emerald-400">
+          Working
+        </span>
+      </div>
+
+      <div class="mt-4 h-2 w-full overflow-hidden rounded-full bg-slate-800">
+        <div
+          class="h-full w-[88%] rounded-full bg-gradient-to-r from-amber-500 to-yellow-400"
+        ></div>
+      </div>
+    </div>
+
+
+    <div class="rounded-2xl border border-slate-800 bg-slate-900/90 p-5 shadow-xl">
+      <p class="mb-1 text-xs uppercase tracking-widest text-slate-400">
+        Swarm State
+      </p>
+
+      <div class="flex items-baseline justify-between">
+        <span class="text-2xl font-black text-emerald-400">
+          READY
+        </span>
+
+        <span class="text-xs font-semibold text-cyan-400">
+          Operational
+        </span>
+      </div>
+
+      <div class="mt-4 h-2 w-full overflow-hidden rounded-full bg-slate-800">
+        <div
+          class="h-full w-full rounded-full bg-gradient-to-r from-emerald-500 to-teal-400"
+        ></div>
+      </div>
+    </div>
+
+  </div>
+
+
+  <!-- Execution Stream -->
+  <div class="rounded-2xl border border-slate-800 bg-slate-900/90 p-6 font-mono shadow-xl">
+
+    <h3 class="mb-3 flex items-center text-sm font-bold uppercase tracking-wider text-slate-300">
+      <span class="mr-2 text-emerald-400">⚡</span>
+      Integrated Swarm Execution Stream
+    </h3>
+
+    <div class="h-40 space-y-2 overflow-y-auto rounded-xl border border-slate-800 bg-slate-950 p-4 text-xs text-slate-300">
+
+      <p class="text-cyan-400">
+        [SWARM] Orchestrator initialized successfully.
+      </p>
+
+      <p class="text-emerald-400">
+        [FORGE] Code generation and implementation agent ready.
+      </p>
+
+      <p class="text-sky-400">
+        [CORE] Testing and verification agent ready.
+      </p>
+
+      <p class="text-amber-400">
+        [BRAIN] Security and performance analysis agent ready.
+      </p>
+
+      <p class="text-cyan-400">
+        [SWARM] Parallel agent execution started.
+      </p>
+
+      <p class="text-emerald-400">
+        [AI CORE] Provider connection established: Gemini.
+      </p>
+
+      <p class="text-slate-500">
+        root@knova-swarm:~# Awaiting next orchestration task...
+      </p>
+
+    </div>
+  </div>
+
+</div>
+
+  </section>  <!-- Three Agents -->  <section class="border-t border-slate-800 px-6 py-24">
+    <div class="mx-auto max-w-6xl">  <div class="text-center">
+
+    <p class="text-sm font-semibold uppercase tracking-[0.3em] text-cyan-400">
+      Specialized Agents
+    </p>
+
+    <h2 class="mt-4 text-4xl font-bold sm:text-5xl">
+      Three Agents. One Intelligence Layer.
+    </h2>
+
+    <p class="mx-auto mt-6 max-w-3xl text-lg leading-8 text-slate-400">
+      SWARM distributes engineering responsibilities across
+      specialized agents while keeping intelligence centralized
+      through the KNOVA AI Core.
+    </p>
+
+  </div>
+
+
+  <div class="mt-12 grid gap-5 md:grid-cols-3">
+
+    <!-- Forge -->
+    <div class="rounded-2xl border border-slate-800 bg-slate-900/60 p-7">
+
+      <p class="text-sm font-semibold text-cyan-400">
+        AGENT 01
+      </p>
+
+      <h3 class="mt-3 text-2xl font-bold">
+        Forge
+      </h3>
+
+      <p class="mt-2 text-sm font-semibold text-slate-300">
+        Code Generation & Implementation
+      </p>
+
+      <p class="mt-4 leading-7 text-slate-400">
+        Responsible for actual code generation and implementation,
+        turning engineering tasks into concrete software changes.
+      </p>
+
+    </div>
+
+
+    <!-- Core -->
+    <div class="rounded-2xl border border-slate-800 bg-slate-900/60 p-7">
+
+      <p class="text-sm font-semibold text-sky-400">
+        AGENT 02
+      </p>
+
+      <h3 class="mt-3 text-2xl font-bold">
+        Core
+      </h3>
+
+      <p class="mt-2 text-sm font-semibold text-slate-300">
+        Testing & Verification
+      </p>
+
+      <p class="mt-4 leading-7 text-slate-400">
+        Reviews generated implementations and provides testing,
+        verification and quality analysis suggestions.
+      </p>
+
+    </div>
+
+
+    <!-- Brain -->
+    <div class="rounded-2xl border border-slate-800 bg-slate-900/60 p-7">
+
+      <p class="text-sm font-semibold text-amber-400">
+        AGENT 03
+      </p>
+
+      <h3 class="mt-3 text-2xl font-bold">
+        Brain
+      </h3>
+
+      <p class="mt-2 text-sm font-semibold text-slate-300">
+        Security & Performance
+      </p>
+
+      <p class="mt-4 leading-7 text-slate-400">
+        Performs security auditing and performance analysis
+        to identify risks and optimization opportunities.
+      </p>
+
+    </div>
+
+  </div>
+
+</div>
+
+  </section>  <!-- AI Core Foundation -->  <section class="border-t border-slate-800 px-6 py-24">
+    <div class="mx-auto max-w-5xl text-center">  <p class="text-sm font-semibold uppercase tracking-[0.3em] text-cyan-400">
+    AI Foundation
+  </p>
+
+  <h2 class="mt-4 text-4xl font-bold sm:text-5xl">
+    Powered by the KNOVA AI Core
+  </h2>
+
+  <p class="mx-auto mt-7 max-w-3xl text-lg leading-8 text-slate-400">
+    KNOVA SWARM does not create a separate AI engine.
+    It uses the existing KNOVA AI Core as its intelligence layer.
+  </p>
+
+  <div class="mt-12 grid gap-5 text-left sm:grid-cols-2 lg:grid-cols-3">
+
+    <div class="rounded-2xl border border-slate-800 bg-slate-900/60 p-6">
+
+      <p class="text-sm font-semibold text-cyan-400">
+        AI CORE
+      </p>
+
+      <h3 class="mt-3 text-xl font-bold">
+        Central Intelligence
+      </h3>
+
+      <p class="mt-3 leading-7 text-slate-400">
+        Existing AI services and provider infrastructure remain
+        the central intelligence foundation for every SWARM agent.
+      </p>
+
+    </div>
+
+
+    <div class="rounded-2xl border border-slate-800 bg-slate-900/60 p-6">
+
+      <p class="text-sm font-semibold text-cyan-400">
+        PROVIDERS
+      </p>
+
+      <h3 class="mt-3 text-xl font-bold">
+        Gemini & More
+      </h3>
+
+      <p class="mt-3 leading-7 text-slate-400">
+        SWARM works through the existing provider system,
+        with Gemini currently working as the active provider.
+      </p>
+
+    </div>
+
+
+    <div class="rounded-2xl border border-slate-800 bg-slate-900/60 p-6">
+
+      <p class="text-sm font-semibold text-cyan-400">
+        ORCHESTRATOR
+      </p>
+
+      <h3 class="mt-3 text-xl font-bold">
+        Unified Execution
+      </h3>
+
+      <p class="mt-3 leading-7 text-slate-400">
+        The orchestrator coordinates agents, execution state
+        and aggregated results through one unified workflow.
+      </p>
+
+    </div>
+
+  </div>
+
+
+  <div class="mx-auto mt-10 max-w-3xl rounded-2xl border border-cyan-400/20 bg-cyan-400/5 p-7">
+
+    <p class="text-lg font-semibold text-cyan-400">
+      KNOVA AI Core → SWARM Orchestration Layer
+    </p>
+
+    <p class="mt-3 leading-7 text-slate-400">
+      The AI Core remains an independent foundation.
+      SWARM adds multi-agent coordination and parallel execution
+      without duplicating the underlying AI engine.
+    </p>
+
+  </div>
+
+</div>
+
+  </section>  <!-- Execution Flow -->  <section class="border-t border-slate-800 px-6 py-24">
+    <div class="mx-auto max-w-5xl text-center">  <p class="text-sm font-semibold uppercase tracking-[0.3em] text-cyan-400">
+    Execution Architecture
+  </p>
+
+  <h2 class="mt-4 text-4xl font-bold sm:text-5xl">
+    From Task to Aggregated Intelligence
+  </h2>
+
+  <p class="mx-auto mt-6 max-w-3xl text-lg leading-8 text-slate-400">
+    A single task enters the orchestrator and is distributed
+    across specialized agents before their results are unified.
+  </p>
+
+
+  <div class="mx-auto mt-12 max-w-2xl space-y-4">
+
+    <div class="rounded-2xl border border-cyan-400/30 bg-cyan-400/10 p-5 font-semibold text-cyan-400">
+      User Task
+    </div>
+
+    <div class="text-2xl text-cyan-400">
+      ↓
+    </div>
+
+    <div class="rounded-2xl border border-slate-800 bg-slate-900 p-5 font-semibold">
+      POST /swarm/execute
+    </div>
+
+    <div class="text-2xl text-cyan-400">
+      ↓
+    </div>
+
+    <div class="rounded-2xl border border-slate-800 bg-slate-900 p-5 font-semibold">
+      SwarmOrchestrator
+    </div>
+
+    <div class="text-2xl text-cyan-400">
+      ↓
+    </div>
+
+    <div class="rounded-2xl border border-cyan-400/30 bg-cyan-400/10 p-5 font-semibold text-cyan-400">
+      SwarmExecutor — Parallel Execution
+    </div>
+
+    <div class="text-2xl text-cyan-400">
+      ↓
+    </div>
+
+    <div class="grid gap-3 sm:grid-cols-3">
+
+      <div class="rounded-2xl border border-slate-800 bg-slate-900 p-5 font-semibold">
+        Forge
+      </div>
+
+      <div class="rounded-2xl border border-slate-800 bg-slate-900 p-5 font-semibold">
+        Core
+      </div>
+
+      <div class="rounded-2xl border border-slate-800 bg-slate-900 p-5 font-semibold">
+        Brain
+      </div>
+
+    </div>
+
+    <div class="text-2xl text-cyan-400">
+      ↓
+    </div>
+
+    <div class="rounded-2xl border border-slate-800 bg-slate-900 p-5 font-semibold">
+      KNOVA AI Core
+    </div>
+
+    <div class="text-2xl text-cyan-400">
+      ↓
+    </div>
+
+    <div class="rounded-2xl border border-cyan-400/30 bg-cyan-400/10 p-5 font-semibold text-cyan-400">
+      Aggregated Result
+    </div>
+
+  </div>
+
+</div>
+
+  </section>  <!-- Current Status -->  <section class="border-t border-slate-800 px-6 py-20">
+    <div class="mx-auto max-w-6xl">  <div class="text-center">
+
+    <p class="text-sm font-semibold uppercase tracking-[0.3em] text-cyan-400">
+      Current Status
+    </p>
+
+    <h2 class="mt-4 text-4xl font-bold sm:text-5xl">
+      Working Multi-Agent Platform
+    </h2>
+
+    <p class="mx-auto mt-6 max-w-3xl text-lg leading-8 text-slate-400">
+      The current SWARM implementation provides a working
+      end-to-end multi-agent orchestration flow from frontend
+      task submission to aggregated AI results.
+    </p>
+
+  </div>
+
+
+  <div class="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+
+    <div class="rounded-2xl border border-slate-800 bg-slate-900/60 p-6">
+      <p class="text-sm text-cyan-400">01</p>
+
+      <h3 class="mt-3 text-xl font-bold">
+        Swarm Engine
+      </h3>
+
+      <p class="mt-3 leading-7 text-slate-400">
+        The SWARM orchestration engine is operational and
+        coordinates specialized AI agents.
+      </p>
+    </div>
+
+
+    <div class="rounded-2xl border border-slate-800 bg-slate-900/60 p-6">
+      <p class="text-sm text-cyan-400">02</p>
+
+      <h3 class="mt-3 text-xl font-bold">
+        Parallel Agents
+      </h3>
+
+      <p class="mt-3 leading-7 text-slate-400">
+        Forge, Core and Brain execute their workloads through
+        asynchronous parallel execution.
+      </p>
+    </div>
+
+
+    <div class="rounded-2xl border border-slate-800 bg-slate-900/60 p-6">
+      <p class="text-sm text-cyan-400">03</p>
+
+      <h3 class="mt-3 text-xl font-bold">
+        AI Core Connection
+      </h3>
+
+      <p class="mt-3 leading-7 text-slate-400">
+        All agents use the existing KNOVA AI Core rather than
+        creating a duplicate intelligence engine.
+      </p>
+    </div>
+
+
+    <div class="rounded-2xl border border-slate-800 bg-slate-900/60 p-6">
+      <p class="text-sm text-cyan-400">04</p>
+
+      <h3 class="mt-3 text-xl font-bold">
+        Result Aggregation
+      </h3>
+
+      <p class="mt-3 leading-7 text-slate-400">
+        Individual agent responses are collected into a unified
+        aggregated summary.
+      </p>
+    </div>
+
+
+    <div class="rounded-2xl border border-slate-800 bg-slate-900/60 p-6">
+      <p class="text-sm text-cyan-400">05</p>
+
+      <h3 class="mt-3 text-xl font-bold">
+        Frontend Integration
+      </h3>
+
+      <p class="mt-3 leading-7 text-slate-400">
+        Angular provides task submission, execution status and
+        result visibility through the SWARM interface.
+      </p>
+    </div>
+
+
+    <div class="rounded-2xl border border-slate-800 bg-slate-900/60 p-6">
+      <p class="text-sm text-cyan-400">06</p>
+
+      <h3 class="mt-3 text-xl font-bold">
+        End-to-End Flow
+      </h3>
+
+      <p class="mt-3 leading-7 text-slate-400">
+        The complete task-to-result workflow is currently
+        operational.
+      </p>
+    </div>
+
+  </div>
+
+</div>
+
+  </section>  <!-- Roadmap -->  <section class="border-t border-slate-800 px-6 py-24">
+    <div class="mx-auto max-w-6xl">  <div class="text-center">
+
+    <p class="text-sm font-semibold uppercase tracking-[0.3em] text-cyan-400">
+      Development Roadmap
+    </p>
+
+    <h2 class="mt-4 text-4xl font-bold sm:text-5xl">
+      The Future of KNOVA SWARM
+    </h2>
+
+  </div>
+
+
+  <div class="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+
+    <div class="rounded-2xl border border-slate-800 bg-slate-900/60 p-6">
+      <p class="text-sm font-semibold text-cyan-400">PHASE 1</p>
+
+      <h3 class="mt-3 text-xl font-bold">
+        Real-Time Agent Progress
+      </h3>
+
+      <p class="mt-3 leading-7 text-slate-400">
+        WebSocket-based live progress updates for individual
+        agents and orchestration state.
+      </p>
+    </div>
+
+
+    <div class="rounded-2xl border border-slate-800 bg-slate-900/60 p-6">
+      <p class="text-sm font-semibold text-cyan-400">PHASE 2</p>
+
+      <h3 class="mt-3 text-xl font-bold">
+        Persistent State
+      </h3>
+
+      <p class="mt-3 leading-7 text-slate-400">
+        Redis-backed state management for reliable and scalable
+        orchestration across distributed environments.
+      </p>
+    </div>
+
+
+    <div class="rounded-2xl border border-slate-800 bg-slate-900/60 p-6">
+      <p class="text-sm font-semibold text-cyan-400">PHASE 3</p>
+
+      <h3 class="mt-3 text-xl font-bold">
+        Silicon Integration
+      </h3>
+
+      <p class="mt-3 leading-7 text-slate-400">
+        Integration with the KNOVA Silicon hardware and telemetry
+        layer for hardware-aware orchestration.
+      </p>
+    </div>
+
+
+    <div class="rounded-2xl border border-slate-800 bg-slate-900/60 p-6">
+      <p class="text-sm font-semibold text-cyan-400">PHASE 4</p>
+
+      <h3 class="mt-3 text-xl font-bold">
+        Agent Communication
+      </h3>
+
+      <p class="mt-3 leading-7 text-slate-400">
+        Direct agent-to-agent communication and collaborative
+        reasoning workflows.
+      </p>
+    </div>
+
+
+    <div class="rounded-2xl border border-slate-800 bg-slate-900/60 p-6">
+      <p class="text-sm font-semibold text-cyan-400">PHASE 5</p>
+
+      <h3 class="mt-3 text-xl font-bold">
+        Task Decomposition
+      </h3>
+
+      <p class="mt-3 leading-7 text-slate-400">
+        Automatic decomposition of complex tasks into smaller
+        specialized sub-tasks.
+      </p>
+    </div>
+
+
+    <div class="rounded-2xl border border-slate-800 bg-slate-900/60 p-6">
+      <p class="text-sm font-semibold text-cyan-400">PHASE 6</p>
+
+      <h3 class="mt-3 text-xl font-bold">
+        Intelligent Result Ranking
+      </h3>
+
+      <p class="mt-3 leading-7 text-slate-400">
+        Advanced ranking, voting and best-answer selection
+        across multiple agent results.
+      </p>
+    </div>
+
+  </div>
+
+</div>
+
+  </section>  <!-- Demo Video -->  <section
+    id="swarm-demo"
+    class="border-t border-slate-800 px-6 py-24"
+  >
+    <div class="mx-auto max-w-5xl">  <div class="text-center">
+
+    <p class="text-sm font-semibold uppercase tracking-[0.3em] text-cyan-400">
+      Live Orchestration Demo
+    </p>
+
+    <h2 class="mt-4 text-4xl font-bold sm:text-5xl">
+      KNOVA SWARM Demo
+    </h2>
+
+    <p class="mx-auto mt-6 max-w-2xl text-lg leading-8 text-slate-400">
+      Watch the working SWARM demonstration, including
+      multi-agent execution, AI Core integration and
+      aggregated results.
+    </p>
+
+  </div>
+
+
+  <div class="mt-10 overflow-hidden rounded-2xl border border-slate-800 bg-black shadow-2xl">
+
+    <video
+      id="swarm-demo-video"
+      class="h-auto w-full"
+      controls
+      preload="metadata"
+      playsinline
+    >
+      <source
+        src="/videos/swarm.mp4"
+        type="video/mp4"
+      />
+
+      Your browser does not support the video element.
+    </video>
+
+  </div>
+
+
+  <div class="mt-6 flex justify-center">
+
+    <button
+      type="button"
+      onclick="const vid = document.getElementById('swarm-demo-video'); vid.scrollIntoView({ behavior: 'smooth' }); vid.play();"
+      class="cursor-pointer rounded-xl bg-cyan-400 px-7 py-3.5 font-semibold text-slate-950 transition hover:bg-cyan-300"
+    >
+      ▶ Play SWARM Demo
+    </button>
+
+  </div>
+
+
+  <p class="mt-4 text-center text-sm text-slate-500">
+    KNOVA SWARM working multi-agent orchestration demonstration
+  </p>
+
+</div>
+
+  </section>  <!-- Status -->  <section class="border-t border-slate-800 px-6 py-24">
+    <div class="mx-auto max-w-4xl text-center">  <div class="mx-auto flex h-20 w-20 items-center justify-center rounded-full border border-cyan-400/30 bg-cyan-400/10 text-3xl">
+    ⚡
+  </div>
+
+  <h2 class="mt-7 text-4xl font-bold">
+    KNOVA SWARM Orchestrator
+  </h2>
+
+  <p class="mt-4 text-xl font-semibold text-cyan-400">
+    Working
+  </p>
+
+  <p class="mx-auto mt-6 max-w-2xl leading-8 text-slate-400">
+    The current SWARM platform is operational with working
+    multi-agent orchestration, parallel execution, KNOVA AI Core
+    integration and aggregated results.
+  </p>
+
+  <p class="mt-7 text-sm text-slate-500">
+    Built by KNOVA in Karachi, Pakistan.
+  </p>
+
+</div>
+
+  </section>  <!-- Footer -->  <footer class="border-t border-slate-800 px-6 py-8">
+    <div class="mx-auto max-w-6xl text-center text-sm text-slate-500">
+      © 2026 AI.KNova.work
+    </div>
+  </footer></div>

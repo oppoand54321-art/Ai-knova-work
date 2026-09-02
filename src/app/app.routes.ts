@@ -37,6 +37,16 @@ export const routes: Routes = [
       import('./pages/v8/v8').then(m => m.V8)
   },
   {
+    path: 'swarm',
+    loadComponent: () =>
+      import('./pages/swarm/swarm').then(m => m.Swarm)
+  },
+  {
+    path: 'sentinel',
+    loadComponent: () =>
+      import('./pages/sentinel/sentinel').then(m => m.Sentinel)
+  },
+  {
     path: '**',
     redirectTo: ''
   }

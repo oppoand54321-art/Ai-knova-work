@@ -1,6 +1,5 @@
 <div class="min-h-screen bg-slate-950 text-white">
 
-  <!-- Hero -->
   <section class="flex min-h-screen items-center justify-center px-6 py-20">
     <div class="mx-auto max-w-5xl text-center">
 
@@ -22,27 +21,20 @@
         and intelligently edit and modify existing projects.
       </p>
 
-      <div class="mt-9 flex flex-wrap justify-center gap-4">
-        <a
-          href="#build-demo"
-          class="rounded-xl bg-cyan-400 px-7 py-3.5 font-semibold text-slate-950 transition hover:bg-cyan-300"
+      <div class="mt-9 flex justify-center">
+        <button
+          type="button"
+          onclick="document.getElementById('build-demo').scrollIntoView({behavior: 'smooth'}); document.getElementById('brain-video-1').play();"
+          class="cursor-pointer rounded-xl bg-cyan-400 px-7 py-3.5 font-semibold text-slate-950 transition hover:bg-cyan-300"
         >
           Build From Scratch
-        </a>
-
-        <a
-          href="#edit-demo"
-          class="rounded-xl border border-slate-700 px-7 py-3.5 font-semibold text-white transition hover:border-cyan-400 hover:text-cyan-400"
-        >
-          Edit Existing Project
-        </a>
+        </button>
       </div>
 
     </div>
   </section>
 
 
-  <!-- Core Capabilities -->
   <section class="border-t border-slate-800 px-6 py-20">
     <div class="mx-auto max-w-6xl">
 
@@ -141,7 +133,6 @@
   </section>
 
 
-  <!-- Build From Scratch -->
   <section id="build-demo" class="border-t border-slate-800 px-6 py-20">
     <div class="mx-auto max-w-5xl text-center">
 
@@ -161,6 +152,7 @@
       <div class="mt-10 overflow-hidden rounded-2xl border border-slate-800 bg-slate-900">
 
         <video
+          id="brain-video-1"
           class="aspect-video w-full object-cover"
           controls
           preload="metadata"
@@ -172,11 +164,20 @@
 
       </div>
 
+      <div class="mt-6 flex justify-center">
+        <button
+          type="button"
+          onclick="document.getElementById('brain-video-1').play()"
+          class="cursor-pointer rounded-xl bg-cyan-400 px-7 py-3.5 font-semibold text-slate-950 transition hover:bg-cyan-300"
+        >
+          ▶ Play Build Demo
+        </button>
+      </div>
+
     </div>
   </section>
 
 
-  <!-- Edit Existing Project -->
   <section id="edit-demo" class="border-t border-slate-800 px-6 py-20">
     <div class="mx-auto max-w-5xl text-center">
 
@@ -196,6 +197,7 @@
       <div class="mt-10 overflow-hidden rounded-2xl border border-slate-800 bg-slate-900">
 
         <video
+          id="brain-video-2"
           class="aspect-video w-full object-cover"
           controls
           preload="metadata"
@@ -207,11 +209,20 @@
 
       </div>
 
+      <div class="mt-6 flex justify-center">
+        <button
+          type="button"
+          onclick="document.getElementById('brain-video-2').play()"
+          class="cursor-pointer rounded-xl bg-cyan-400 px-7 py-3.5 font-semibold text-slate-950 transition hover:bg-cyan-300"
+        >
+          ▶ Play Edit Demo
+        </button>
+      </div>
+
     </div>
   </section>
 
 
-  <!-- Workflow -->
   <section class="border-t border-slate-800 px-6 py-20">
     <div class="mx-auto max-w-5xl text-center">
 
@@ -265,7 +276,6 @@
   </section>
 
 
-  <!-- Closing -->
   <section class="border-t border-slate-800 px-6 py-24">
     <div class="mx-auto max-w-4xl text-center">
 
@@ -286,7 +296,6 @@
   </section>
 
 
-  <!-- Footer -->
   <footer class="border-t border-slate-800 px-6 py-8">
     <div class="mx-auto max-w-6xl text-center text-sm text-slate-500">
       © 2026 AI.KNova.work
